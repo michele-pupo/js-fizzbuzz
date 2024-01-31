@@ -16,24 +16,33 @@
 // creo un elemento html da utilizzare nel ciclo "for"
 const grigliaElement = document.querySelector("#griglia");
 
-// creiamo un ciclo for che crei i numeri da 1 a 100
+// // creiamo un ciclo for che crei i numeri da 1 a 100
+// for(let i = 1; i<=100; i++){
+
+//     // creiamo la condizione che se il numero scritto è un multipo di 3 e di 5 apllico una classe
+//     if (i % 3 == 0 && i % 5 == 0) {
+//         grigliaElement.innerHTML +=
+//         `<div class="square frizzbuzz" >${i}</div>`;
+//     // creiamo la condizione che se il numero scritto è un multipo di 3 apllica una seconda classe
+//     } else if (i % 3 == 0){
+//         grigliaElement.innerHTML +=
+//         `<div class="square frizz" >${i}</div>`;
+//     // creiamo la condizione che se il numero scritto è sia multipo 5 apllica una terza classe
+//     } else if (i % 5 == 0){
+//         grigliaElement.innerHTML +=
+//         `<div class="square buzz" >${i}</div>`;
+//     // altrimenti non applica nessuna classe
+//     }else{
+//         grigliaElement.innerHTML +=
+//         `<div class="square" >${i}</div>`;
+//     }
+// }// 
+
+
+// BONUS 1
 for(let i = 1; i<=100; i++){
 
-    // creiamo la condizione che se il numero scritto è un multipo di 3 apllica una classe
-    if(i % 3 == 0) {
-        grigliaElement.innerHTML +=
-        `<div class="square frizz" >${i}</div>`;
-    // creiamo la condizione che se il numero scritto è un multipo di 5 apllica una seconda classe
-    } else if (i % 5 == 0){
-        grigliaElement.innerHTML +=
-        `<div class="square buzz" >${i}</div>`;
-    // creiamo la condizione che se il numero scritto è sia multipo di 3 che di 5 apllica una terza classe
-    } else if (i % 3 == 0 && i % 5 == 0){
-        grigliaElement.innerHTML +=
-        `<div class="square frizzbuzz" >${i}</div>`;
-    // altrimenti non applica nessuna classe
-    }else{
-        grigliaElement.innerHTML +=
-        `<div class="square" >${i}</div>`;
-    }
+    // creare un elemento HTML
+    const newElement = document.createElement("div");
+    newElement.className = "square";
 }
