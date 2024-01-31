@@ -19,7 +19,21 @@ const grigliaElement = document.querySelector("#griglia");
 // creiamo un ciclo for che crei i numeri da 1 a 100
 for(let i = 1; i<=100; i++){
 
-    console.log(i)
-    grigliaElement.innerHTML +=
-    `<div class="square" >${i}</div>`;
+    // creiamo la condizione che se il numero scritto è un multipo di 3 apllica una classe
+    if(i % 3 == 0) {
+        grigliaElement.innerHTML +=
+        `<div class="square frizz" >${i}</div>`;
+    // creiamo la condizione che se il numero scritto è un multipo di 5 apllica una seconda classe
+    } else if (i % 5 == 0){
+        grigliaElement.innerHTML +=
+        `<div class="square buzz" >${i}</div>`;
+    // creiamo la condizione che se il numero scritto è sia multipo di 3 che di 5 apllica una terza classe
+    } else if (i % 3 == 0 && i % 5 == 0){
+        grigliaElement.innerHTML +=
+        `<div class="square frizzbuzz" >${i}</div>`;
+    // altrimenti non applica nessuna classe
+    }else{
+        grigliaElement.innerHTML +=
+        `<div class="square" >${i}</div>`;
+    }
 }
