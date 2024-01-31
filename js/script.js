@@ -45,4 +45,21 @@ for(let i = 1; i<=100; i++){
     // creare un elemento HTML
     const newElement = document.createElement("div");
     newElement.className = "square";
+    newElement.innerHTML = i;
+
+    grigliaElement.append(newElement);
+  
+    // creiamo la condizione che se il numero scritto è un multipo di 3 e di 5 apllico una classe
+    if (i % 3 == 0 && i % 5 == 0) {
+        newElement.className += " frizzbuzz"
+    // creiamo la condizione che se il numero scritto è un multipo di 3 apllica una seconda classe
+    } else if (i % 3 == 0){
+        newElement.className += " frizz"
+    // creiamo la condizione che se il numero scritto è sia multipo 5 apllica una terza classe
+    } else if (i % 5 == 0){
+        newElement.className += " buzz"
+    // altrimenti non applica nessuna classe
+    }else{
+        newElement.innerHTML = i;
+    }
 }
