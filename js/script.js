@@ -51,13 +51,19 @@ for(let i = 1; i<=100; i++){
   
     // creiamo la condizione che se il numero scritto è un multipo di 3 e di 5 apllico una classe
     if (i % 3 == 0 && i % 5 == 0) {
-        newElement.className += " frizzbuzz"
+        newElement.className += " fizzbuzz";
+        newElement.innerHTML = 'fizzbuzz';
+
     // creiamo la condizione che se il numero scritto è un multipo di 3 apllica una seconda classe
     } else if (i % 3 == 0){
-        newElement.className += " frizz"
+        newElement.className += " fizz";
+        newElement.innerHTML = 'fizz';
+
     // creiamo la condizione che se il numero scritto è sia multipo 5 apllica una terza classe
     } else if (i % 5 == 0){
         newElement.className += " buzz"
+        newElement.innerHTML = 'buzz';
+
     // altrimenti non applica nessuna classe
     }else{
         newElement.innerHTML = i;
